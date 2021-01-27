@@ -1,0 +1,31 @@
+{
+  "ids": {
+    "User": 2,
+    "AccessToken": 3,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Propiedad": 19,
+    "Contacto": 6
+  },
+  "models": {
+    "User": {
+      "1": "{\"username\":\"admin\",\"password\":\"$2a$10$0iJ4SvVYPNosgJAqC5wTmuZLvozEWUZiDRKWN.mgkxsHj7k3NHbK2\",\"email\":\"alonso@gmail.com\",\"id\":1}"
+    },
+    "AccessToken": {
+      "vlaSSc04zWAEoGZPEpenRWLILzo9j0wfdDUqqAItgVyT45VmqqQPKaDC6H6jDzBE": "{\"id\":\"vlaSSc04zWAEoGZPEpenRWLILzo9j0wfdDUqqAItgVyT45VmqqQPKaDC6H6jDzBE\",\"ttl\":1209600,\"created\":\"2020-06-01T12:36:06.609Z\",\"userId\":1}",
+      "lqiCErxTKZpPZcOSGkGPsUkaVyrMgr6EUUk1Kc6CUa4q8BDJFsIBKI1e1fCG2xKb": "{\"id\":\"lqiCErxTKZpPZcOSGkGPsUkaVyrMgr6EUUk1Kc6CUa4q8BDJFsIBKI1e1fCG2xKb\",\"ttl\":1209600,\"created\":\"2020-06-01T21:15:46.435Z\",\"userId\":1}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Propiedad": {
+      "15": "{\"codigo\":\"15\",\"tipoOperacion\":\"venta\",\"tipoPropiedad\":\"departamento\",\"dormitorios\":\"2\",\"direccion\":\"Cordoba 5430\",\"direccionMap\":\"Cordoba 5430, rosario, Santa Fe, Argentina\",\"ciudad\":\"rosario\",\"fotoPortada\":\"http://localhost:3001/api/containers/images/download/living2dorm.jpg\",\"fotos\":[\"http://localhost:3001/api/containers/images/download/living2dorm2.jpg\",\"http://localhost:3001/api/containers/images/download/solarium.jpg\",\"http://localhost:3001/api/containers/images/download/solarium2.jpg\",\"http://localhost:3001/api/containers/images/download/solarium3.jpg\",\"http://localhost:3001/api/containers/images/download/vistaInterior - copia.jpg\"],\"slider\":true,\"geolocation\":{\"lat\":\"-32.9269321\",\"lng\":\"-60.7436163\"},\"id\":15,\"contactoId\":5,\"supCubierta\":\"140\",\"banos\":2}",
+      "17": "{\"codigo\":\"2\",\"tipoOperacion\":\"venta\",\"tipoPropiedad\":\"departamento\",\"dormitorios\":\"2\",\"direccion\":\"Constitucion 1023\",\"direccionMap\":\"Constitucion 1023, rosario, Santa Fe, Argentina\",\"ciudad\":\"rosario\",\"fotoPortada\":\"http://localhost:3001/api/containers/images/download/edificio.jpg\",\"fotos\":[\"http://localhost:3001/api/containers/images/download/32c80899-4196-4d3a-893c-476ca77d590a.jpg\",\"http://localhost:3001/api/containers/images/download/5499e534-2a54-4a73-8ffc-0e73217c6ec8.jpg\",\"http://localhost:3001/api/containers/images/download/8361d408-5d24-4edf-b5c0-11be0c94efe3.jpg\"],\"aptaCredito\":true,\"geolocation\":{\"lat\":\"-32.943046322449\",\"lng\":\"-60.6743708020408\"},\"id\":17,\"video\":\"https://www.youtube.com/embed/M-ImEnQKo4k\",\"contactoId\":5,\"supCubierta\":\"150\",\"banos\":1,\"cocheras\":1}",
+      "18": "{\"codigo\":\"100\",\"tipoOperacion\":\"venta\",\"tipoPropiedad\":\"departamento\",\"dormitorios\":\"2\",\"direccion\":\"La Paz 854\",\"direccionMap\":\"La Paz 854, rosario, Santa Fe, Argentina\",\"ciudad\":\"rosario\",\"supCubierta\":\"120\",\"banos\":1,\"cocheras\":1,\"fotoPortada\":\"http://localhost:3001/api/containers/images/download/distribuidoraSantaFe.jpg\",\"estadoOperacion\":\"reservada\",\"aptaCredito\":true,\"geolocation\":{\"lat\":\"-32.9646884265306\",\"lng\":\"-60.6393243877551\"},\"contactoId\":5,\"id\":18}"
+    },
+    "Contacto": {
+      "5": "{\"nombre\":\"Walter Alonso\",\"mail\":\"walonso@live.com.ar\",\"telefono\":\"341 5 494381\",\"foto\":\"http://localhost:3001/api/containers/images/download/Foto Walter.jpg\",\"id\":5}"
+    }
+  }
+}

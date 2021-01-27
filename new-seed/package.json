@@ -1,0 +1,29 @@
+{
+  "name": "new-seed",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "fetch": "^1.1.0",
+    "google-maps-react": "^2.0.6",
+    "gray-matter": "^4.0.2",
+    "next": "9.3.5",
+    "ol": "^6.3.1",
+    "ol-geocoder": "^4.0.0",
+    "ol-popup": "^4.0.0",
+    "react": "16.13.1",
+    "react-airform": "0.0.2",
+    "react-dom": "16.13.1",
+    "react-geocode": "^0.2.1",
+    "react-image-lightbox": "^5.1.1",
+    "react-meta-tags": "^0.7.4",
+    "react-share": "^4.1.0",
+    "react-string-replace": "^0.4.4"
+  }
+}

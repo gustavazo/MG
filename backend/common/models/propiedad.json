@@ -1,0 +1,119 @@
+{
+  "name": "Propiedad",
+  "plural": "propiedades",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "scope": {
+    "include": "contacto"
+  },
+  "properties": {
+    "codigo": {
+      "type": "string",
+      "required": true
+    },
+    "tipoOperacion": {
+      "type": "string",
+      "required": true
+    },
+    "tipoPropiedad": {
+      "type": "string",
+      "required": true
+    },
+    "dormitorios": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string",
+      "required": true
+    },
+    "direccionMap": {
+      "type": "string"
+    },
+    "barrio": {
+      "type": "string"
+    },
+    "ciudad": {
+      "type": "string",
+      "required": true
+    },
+    "precio": {
+      "type": "string"
+    },
+    "formaPago": {
+      "type": "string"
+    },
+    "supTerreno": {
+      "type": "string"
+    },
+    "supCubierta": {
+      "type": "string"
+    },
+    "supSCubierta": {
+      "type": "string"
+    },
+    "antiguedad": {
+      "type": "string"
+    },
+    "plantas": {
+      "type": "string"
+    },
+    "banos": {
+      "type": "number"
+    },
+    "cocheras": {
+      "type": "number"
+    },
+    "acceso": {
+      "type": "string"
+    },
+    "piso": {
+      "type": "string"
+    },
+    "servicios": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "video": {
+      "type": "string"
+    },
+    "fotoPortada": {
+      "type": "string",
+      "required": false
+    },
+    "fotos": {
+      "type": [
+        "string"
+      ]
+    },
+    "estadoOperacion": {
+      "type": "string"
+    },
+    "aptaCredito": {
+      "type": "boolean"
+    },
+    "slider": {
+      "type": "boolean"
+    },
+    "geolocation": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "contacto": {
+      "type": "belongsTo",
+      "model": "Contacto",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
