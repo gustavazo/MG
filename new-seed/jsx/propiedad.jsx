@@ -514,7 +514,7 @@ const PropiedadDetalle = ({ info, parecidas }) => {
 
 
             <div className="div-block-63">
-              <div className="tituloSocial">Compartir esta propiedad en redes sociales</div>
+              <div className="text-block-5">Compartir esta propiedad en redes sociales</div>
               <div className="wrapperSocial">
                 <div style={{ marginRight: 10 }}>
                   <FacebookShareButton url={rutaCompartir}>
@@ -543,24 +543,33 @@ const PropiedadDetalle = ({ info, parecidas }) => {
               </div>
               <a href="#" className="lightbox-link w-inline-block w-lightbox"><img src="https://d3e54v103j8qbb.cloudfront.net/img/placeholder-thumb.svg" loading="lazy" alt="" className="image-4" />
               </a>
-              <div className="div-block-35">
-                <div className="txtvendida">Vendida</div>
-              </div>
+
+              {estadoOperacion ?
+              
+                <div className="div-block-35">
+                  <div className="txtvendida">{estadoOperacion}</div>
+                </div> : null
+              }
+
             </div>
-            <div className="div-block-21" />
+           
+            <div className="div-block-21">
+                <MapaPropiedad coordenadas={info.geolocation} operacion={info.tipoOperacion}></MapaPropiedad>     {/*-------------- M A P A -------------- */}
+            </div> 
+
             <div className="columns-4 w-row">
               <div className="column-8 w-col w-col-4 w-col-small-6 w-col-tiny-tiny-stack">
                 <div className="txtctacto">Contacto</div>
-                <div className="div-block-32" />
-                <div className="txtctacto">Gustavo Trovant</div>
+                <img src={fotoContacto} />
+                <div className="txtctacto">{info.contacto.nombre}</div>
                 <div className="linkctacto"><img src="images/mobileIcon.png" loading="lazy" alt="Icono móvil" className="image-8" />
-                  <a href="#" className="txtctacto">Text Link</a>
+                  <a href="#" className="txtctacto">{info.contacto.telefono}</a>
                 </div>
                 <div className="linkctacto"><img src="images/whatsIcon.png" loading="lazy" alt="Icono Whatsapp" className="image-8" />
-                  <a href="#" className="txtctacto">Text Link</a>
+                  <a href="#" className="txtctacto">{info.contacto.telefono}</a>
                 </div>
                 <div className="linkctacto"><img src="images/mailIcon.png" loading="lazy" alt="Icono mail" className="image-8" />
-                  <a href="#" className="txtctacto">Text Link</a>
+                  <a href="#" className="txtctacto">{info.contacto.mail}</a>
                 </div>
               </div>
               <div className="column-9 w-col w-col-8 w-col-small-6 w-col-tiny-tiny-stack">
