@@ -1,3 +1,41 @@
+/*---------css de Alonso---------*/
+
+
+.linkdestaca {
+  margin-right: 0%;
+  margin-left: 0%;
+  padding-right: 0%;
+  text-decoration: none;
+}
+
+.linkdestaca.w--current {
+  position: relative;
+  margin-top: 0px;
+}
+.imgdestaca {
+  height: auto;
+}
+.div-block-aa {
+  padding: 10px;
+  background-color: #96dce5;
+}
+.heading-77 {
+  color: #f0f0f0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.text-block-88 {
+  margin-top: 2px;
+  margin-bottom: 3px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(237, 239, 242, 0.24);
+  color: #141414;
+  font-size: 15px;
+  text-align: center;
+}
+
+/*--------------------------------------------*/
+
 .div-block-63{
   padding-left: 30px;
 }
@@ -916,7 +954,7 @@
 }
 
 .div-block-21 {
-  height: 40vh;
+  height: auto;
   background-image: url('../images/Sin-título.png');
   background-position: 50% 50%;
   background-size: auto;

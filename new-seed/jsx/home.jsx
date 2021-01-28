@@ -112,7 +112,10 @@ const Home = (props) => {
                   </div>
                 </div>
               </div>
-              <div data-w-tab="Tab 2" className="w-tab-pane"><img src="images/Sin-título.png" loading="lazy" sizes="(max-width: 479px) 97vw, (max-width: 991px) 96vw, (max-width: 2204px) 86vw, 1896px" srcSet="images/Sin-título-p-500.png 500w, images/Sin-título-p-800.png 800w, images/Sin-título-p-1080.png 1080w, images/Sin-título-p-1600.png 1600w, images/Sin-título.png 1896w" alt="" className="image-3" /></div>
+              <div data-w-tab="Tab 2" className="w-tab-pane">
+                 <MapContainer propiedades={propiedades} key={key}/>
+                 {/*<img src="images/Sin-título.png" loading="lazy" sizes="(max-width: 479px) 97vw, (max-width: 991px) 96vw, (max-width: 2204px) 86vw, 1896px" srcSet="images/Sin-título-p-500.png 500w, images/Sin-título-p-800.png 800w, images/Sin-título-p-1080.png 1080w, images/Sin-título-p-1600.png 1600w, images/Sin-título.png 1896w" alt="" className="image-3" />*/}
+              </div>
             </div>
           </div>
       </div>
@@ -120,11 +123,11 @@ const Home = (props) => {
 
 
 
-      <MapContainer propiedades={propiedades} key={key}/>
+      {/*<MapContainer propiedades={propiedades} key={key}/>*/}
 
 
 
-      <div className="section-14">
+      {/*<div className="section-14">
         <h2 className="heading-12">Propiedades destacadas</h2>
       </div>
       <div className="wrapperdestacados">
@@ -139,7 +142,7 @@ const Home = (props) => {
            )
           )
         }       
-      </div>
+      </div>*/}
 
     </div>
     </>

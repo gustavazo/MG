@@ -22,7 +22,7 @@ const styles = {
   divDestacaMap: {
     position: 'relative',
     overflow: 'hidden',
-    height: '20vh'  
+    height: 'auto'  
   },
   opciones: {
     position: "absolute",
@@ -57,7 +57,7 @@ const styles = {
     width: 25,
     height: 25,
     float: "right",
-    backgroundColor: "rgba(42, 124, 121, 0.86)",
+    backgroundColor: "rgba(150, 220, 229, 0.56)",
     color: "white",
     padding: 5,
     borderRadius: 100,
@@ -240,11 +240,11 @@ export class MapContainer extends Component {
                     <div style={styles.divDestacaMap}><img src={this.state.propiedadActual.fotoPortada} alt="" className="imgdestaca" />  
 
                     </div>
-                    <div className="div-block-27">
+                    <div className="div-block-aa">
                       
                       
-                      <h3 className="heading-7">{`${this.state.propiedadActual.tipoOperacion} ${this.state.propiedadActual.tipoPropiedad} ${this.state.propiedadActual.ciudad}`}</h3>
-                      <div className="text-block-8">{this.state.propiedadActual.direccion}</div>
+                      <h3 className="heading-77">{`${this.state.propiedadActual.tipoOperacion} ${this.state.propiedadActual.tipoPropiedad} ${this.state.propiedadActual.ciudad}`}</h3>
+                      <div className="text-block-88">{this.state.propiedadActual.direccion}</div>
                       
                     </div>
                     
