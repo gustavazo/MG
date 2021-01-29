@@ -51,7 +51,7 @@ export default function Layout({ children, pageTitle }) {
 
       <Footer />
 
-      <script src="/js/jquery.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossOrigin="anonymous"></script>
+      <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fb41780061800ec0492712a" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="/js/webflow.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/ol-geocoder"></script>

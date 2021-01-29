@@ -5,15 +5,11 @@ const filtroInicial = {
     dormitorios: ''
 };
 
-const filtroMostrar = {
-    tipoOperacion: '',
-    ciudad: '',
-    tipoPropiedad: '',
-    dormitorios: ''
-};
+
 
 const Buscador = (props) => {
     const [filtro, setFiltro] = React.useState(filtroInicial);
+    
     
     const onSelectFiltro = (evt) => {
         const nombreFiltro = evt.target.name;

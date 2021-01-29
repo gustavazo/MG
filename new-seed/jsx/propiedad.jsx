@@ -144,7 +144,6 @@ const PropiedadDetalle = ({ info, parecidas }) => {
 
   const tele = info.contacto.telefono.replace(/\s+/g, '');
   const what = `https://wa.me/549${tele}?text=${referencia}`
-  console.log(what);
 
   return (
     <>
@@ -157,285 +156,6 @@ const PropiedadDetalle = ({ info, parecidas }) => {
         <meta name="og:description" content={info.descripcion}></meta>
         <meta name="og:url" content={rutaCompartir} />
       </Head>
-
-      
-
-      {/*<div className="section-16">
-        <div className="div-block-53" />
-        <div className="columns-3 w-row">
-          <div className="column-2 w-col w-col-5">
-            <div className="div-block-54">
-              <div className="div-block-52">
-                <h1 className="h1propiedad">{info.tipoOperacion}</h1>
-                <div className="contdatos">
-                  <div className="punto">»</div>
-                  <h2 className="h2datos">{info.tipoPropiedad}</h2>
-                </div>
-                <div className="contdatos">
-                  <div className="punto">»</div>
-                  <h2 className="h2datos">{info.dormitorios} dormitorios</h2>
-                </div>
-                <div className="contdatos">
-                  <div className="punto">»</div>
-                  <h2 className="h2datos">{info.direccion}</h2>
-                </div>
-
-                {info.barrio ?
-                  <div className="contdatos">
-                    <div className="punto">»</div>
-                    <h2 className="h2datos">{info.barrio}</h2>
-                  </div> : null
-                }
-
-                <div className="contdatos">
-                  <div className="punto">»</div>
-                  <h2 className="h2datos">{info.ciudad}</h2>
-                </div>
-                <div className="divprecio">
-                  <div className="txtprecio">Precio: {info.precio}</div>
-                </div>
-              </div>
-              <div className="div-block-57">
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Código de referencia:</div>
-                  <div className="resultcaract">{info.codigo}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Forma de pago:</div>
-                  <div className="resultcaract">{info.formaPago}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Superficie del terreno:</div>
-                  <div className="resultcaract">{info.supTerreno} m2</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Superficie cubierta:</div>
-                  <div className="resultcaract">{info.supCubierta} m2</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Superficie semi cubierta:</div>
-                  <div className="resultcaract">{info.supSCubierta} m2</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Antigüedad:</div>
-                  <div className="resultcaract">{info.antiguedad}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Plantas:</div>
-                  <div className="resultcaract">{info.plantas}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Baños:</div>
-                  <div className="resultcaract">{info.banos}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Cocheras:</div>
-                  <div className="resultcaract">{info.cocheras}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Acceso:</div>
-                  <div className="resultcaract">{info.acceso}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Piso:</div>
-                  <div className="resultcaract">{info.piso}</div>
-                </div>
-                <div className="div-block-56">
-                  <div className="signomayor">&gt;</div>
-                  <div className="txtcaract">Servicios:</div>
-                  <div className="resultcaract">{info.servicios}</div>
-                </div>
-              </div>
-              <div className="descripc">
-                <div className="titulonaranja">Descripción</div>
-                <p className="parrdescrip">{info.descripcion}</p>
-              </div>
-            </div>
-            <div className="div-block-62" />
-            <div style={{ paddingTop: '56.17021276595745%' }} id="w-node-6e95e4747161-be5037ad" className="w-embed-youtubevideo youtube"><iframe src={info.video} frameBorder={0} style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%', pointerEvents: 'auto' }} allow="autoplay; encrypted-media" allowFullScreen /></div>
-
-
-            <div className="div-block-63">
-              <div className="titulonaranja">Compartir esta propiedad en redes sociales</div>
-              <div className="html-embed-2 w-embed w-script">
-                <div style={{ marginRight: 10 }}>
-                  <FacebookShareButton url={rutaCompartir}>
-                    <FacebookIcon size={32} round={true} />
-                  </FacebookShareButton>
-                </div>
-                <div style={{ marginRight: 10 }}>
-                  <WhatsappShareButton url={rutaCompartir}>
-                    <WhatsappIcon size={32} round={true} />
-                  </WhatsappShareButton>
-                </div>
-                <div style={{ marginRight: 10 }}>
-                  <TwitterShareButton url={rutaCompartir}>
-                    <TwitterIcon size={32} round={true} />
-                  </TwitterShareButton>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="column-3 w-col w-col-7">
-            <a href="#" title="Hacer click para ver más" className="lightbox-link w-inline-block w-lightbox" onClick={() => setIsOpen(true)}>
-              <img src={info.fotoPortada} sizes="(max-width: 767px) 100vw, (max-width: 6703px) 58vw, 3888px" alt="" className="image-17" />
-            </a>
-
-            <div>
-              {/* <button type="button" onClick={() => setIsOpen(true)}>
-                            Open Lightbox
-                          </button> */}
-              {/*}
-              {isOpen && (
-                <Lightbox
-                  mainSrc={images[photoIndex]}
-                  nextSrc={images[(photoIndex + 1) % images.length]}
-                  prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-                  onCloseRequest={() => setIsOpen(false)}
-                  onMovePrevRequest={() =>
-                    setPhotoIndex(
-                      (photoIndex + images.length - 1) % images.length,
-                    )
-                  }
-                  onMoveNextRequest={() =>
-                    setPhotoIndex(
-                      (photoIndex + 1) % images.length,
-                    )
-                  }
-                />
-              )}
-            </div>
-
-            {aptaCredito || estadoOperacion ?
-              <div className="opcionesventa">
-                <div className="text-block-21">{aptaCredito}</div>
-                <div className="text-block-21 negrita">{estadoOperacion}</div>
-              </div> : null
-            }
-
-
-            <div className="divestado" />
-
-
-            <div>
-
-              {/*<div className="div-block-58">
-
-                <MapaPropiedad coordenadas={info.geolocation} operacion={info.tipoOperacion}></MapaPropiedad>
-          </div>*/}
-
-           {/* </div>
-            <div className="div-block-61">
-              <div className="columns-4 w-row">
-                <div className="w-col w-col-5">
-                  <div className="txtcaract">Contacto</div><img src={fotoContacto} />
-                  <div className="text-block-17">{info.contacto.nombre}</div>
-                  <div className="div-block-59"><img src="../images/celu.png" alt="" className="imgiconctacto" /><a href="tel:3415494381" className="linkctacto">{info.contacto.telefono}</a></div>
-                  <div className="div-block-59"><img src="../images/whatt.png" alt="" className="imgiconctacto" /><a href={what} className="linkctacto">{info.contacto.telefono}</a></div>
-                  <div className="div-block-59"><img src="../images/mail.png" alt="" className="imgiconctacto" /><a href="#" className="linkctacto">{info.contacto.mail}</a></div>
-                </div>
-                <div className="column-4 w-col w-col-7">
-                  <div className="div-block-60">
-                    <div className="txtcaract">Consulte por mail con el contacto</div>
-
-                    <Airform email="walonso@live.com.ar">
-                      
-
-                      <input type="text" className="w-input" maxLength={256} name="Nombre" data-name="Name" placeholder="Nombre" id="name" required />
-                      <input type="email" className="w-input" maxLength={256} name="Email" data-name="Email" placeholder="Su email" id="email" required />
-                      <input type="text" className="w-input" maxLength={256} name="Telefono" data-name="Field 2" placeholder="Teléfono" id="field-2" />
-                      <textarea id="field" name="Mensaje" maxLength={5000} className="w-input" defaultValue={referencia.toUpperCase()} />
-                      <input type="hidden" name="_replyto" />
-                      <input type="submit" value="Enviar" data-wait="Por favor espere..." className="submit-button-3 w-button" />
-
-
-                    </Airform>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Otras propiedades que pueden interesarle
-
-            {parecidasNew.length ? <div className="titulonaranja">Otras propiedades que pueden interesarle</div> : null}
-            <div className="columns-6 w-row">
-              {
-                parecidasNew.map(parecida => {
-
-                  const aptaCredito = parecida.aptaCredito ? "Apta crédito" : "";
-                  const estadoOperacion = 
-                    parecida.reservada 
-                    ? "Reservada" 
-                    : parecida.alquilada 
-                    ? "Alquilada" 
-                    : parecida.vendida 
-                    ? "Vendida" 
-                    : "";
-
-                  return (
-                    <div className="w-col w-col-6 w-col-stack" style={{ margin: 5, width: '46%'}}>
-                      <div >
-                      <a href="propiedad.html" aria-current="page" className="linkdestaca w-inline-block w--current">
-                        <div className="divdestaca">
-                        <img src={parecida.fotoPortada} alt="" className="imgdestaca" /></div>
-                        <div className="div-block-27">
-                        <h3 className="heading-7">{parecida.tipoOperacion}</h3>
-                          <h3 className="heading-7">{parecida.tipoPropiedad}</h3>
-                          <h3 className="heading-7">{parecida.ciudad}</h3>
-
-                          <div className="text-block-8">{parecida.direccion}</div>
-                          <div className="div-block-37">
-                            <div className="diviconos"><img src="/images/m2.png" alt="" className="iconocasa" />
-                              <div className="text-block-11">{parecida.supCubierta}</div>
-                            </div>
-                            <div className="diviconos"><img src="/images/dorm.png" alt="" className="iconocasa" />
-                              <div className="text-block-11">{parecida.dormitorios}</div>
-                            </div>
-                            <div className="diviconos"><img src="/images/baños.png" alt="" className="iconocasa" />
-                              <div className="text-block-11">{parecida.banos}</div>
-                            </div>
-                            <div className="diviconos"><img src="/images/cochera.png" alt="" className="iconocasa" />
-                              <div className="text-block-11">{parecida.cocheras}</div>
-                            </div>
-                            
-                          </div>
-                          
-                        </div>
-                      </a>
-                      {parecida.aptaCredito || parecida.estadoOperacion ?
-                        <div className="opcionesventa">
-                          <div className="text-block-21">
-                            {aptaCredito}
-                          </div>
-                          <div className="text-block-21 negrita">{parecida.estadoOperacion}</div>
-                        </div> : null
-                      }
-                     </div>
-                     
-                    </div>
-                  ) 
-                    
-                })
-              }
-            </div>
-          </div>
-        </div>
-      </div>
-            */}
-
-
 
       <div className="section-3">
         <div className="columns-2 w-row">
@@ -537,12 +257,46 @@ const PropiedadDetalle = ({ info, parecidas }) => {
 
 
           <div className="column-5 w-col w-col-7 w-col-small-small-stack">
-            <div className="div-block-19">
-              <div className="div-block-22">
+            <div className="div-block-19" style={{backgroundImage: `url("${info.fotoPortada}")`}} onClick={() => setIsOpen(true)}>
+            {/*<div className="div-block-22">
                 <div className="text-block-6">Hacer click en la magen para galería</div>
               </div>
               <a href="#" className="lightbox-link w-inline-block w-lightbox"><img src="https://d3e54v103j8qbb.cloudfront.net/img/placeholder-thumb.svg" loading="lazy" alt="" className="image-4" />
-              </a>
+              </a>*/}
+
+              <div className="div-block-22">
+                <div className="text-block-6">Hacer click en la magen para galería</div>
+              </div>
+
+              <div>
+                <button type="button" onClick={() => setIsOpen(true)}>
+                  Open Lightbox
+               </button>
+
+                {isOpen && (
+                  <Lightbox
+                    mainSrc={images[photoIndex]}
+                    nextSrc={images[(photoIndex + 1) % images.length]}
+                    prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                    onCloseRequest={() => setIsOpen(false)}
+                    onMovePrevRequest={() =>
+                      setPhotoIndex(
+                        (photoIndex + images.length - 1) % images.length,
+                      )
+                    }
+                    onMoveNextRequest={() =>
+                      setPhotoIndex(
+                        (photoIndex + 1) % images.length,
+                      )
+                    }
+                  />
+                )}
+              </div>
+
+
+
+
+
 
               {estadoOperacion ?
               

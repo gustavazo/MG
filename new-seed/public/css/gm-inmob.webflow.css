@@ -915,7 +915,7 @@
 .div-block-19 {
   position: relative;
   height: 70vh;
-  background-image: url('../images/00479970-01.jpg');
+    
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -985,7 +985,8 @@
 }
 
 .image-4 {
-  display: none;
+  display: inline;
+  width: 100%;
 }
 
 .div-block-23 {

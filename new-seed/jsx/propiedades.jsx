@@ -120,7 +120,7 @@ const Propiedades = (props) => {
         <>
           <Head>
             <title>
-              Alonso & asociados | Propiedades
+              GM | Bienes Raíces
             </title>
             <meta name="description" content="Consulte por nuestras propiedades en Rosario y zona." />
           </Head>
