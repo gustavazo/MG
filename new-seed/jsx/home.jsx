@@ -10,13 +10,7 @@ import Head from 'next/head'
 import MetaTags from 'react-meta-tags'
 
 
-const styles = {
-  dive: {
-    width: '100%',
-    height: 500,
-    backgroundColor: "red"
-  },
-}
+
 
 
 const Home = (props) => {
@@ -108,7 +102,7 @@ const Home = (props) => {
                       <div className="fichapropiedad" style={{backgroundImage: `url("${p.fotoPortada}")`}}>
                         <div className="infoficha">
                           <div className="div-block-12">
-                            <div className="text-block-3">{p.tipoOperacion}</div>
+                            <div className="text-block-3">{p.direccion}</div>
                             <a href="#" className="button-5 w-button">Ver</a>
                           </div>
                         </div>

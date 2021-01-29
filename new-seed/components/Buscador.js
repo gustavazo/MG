@@ -17,6 +17,7 @@ const Buscador = (props) => {
 
         setFiltro({
             [nombreFiltro]: valor
+            
         });
 
         
@@ -97,7 +98,7 @@ const Buscador = (props) => {
                 <div className="div-block-9">
                     <div className="destacado" />
                     <div className="selectfilter">
-                        <div className="text-block-2">Búsqueda: {filtro.tipoOperacion} / {filtro.ciudad} / {filtro.tipoPropiedad} / {filtro.dormitorios}</div>
+                        <div className="text-block-2">Búsqueda:  {filtro.tipoOperacion} / {filtro.ciudad} / {filtro.tipoPropiedad} / {filtro.dormitorios}</div>
                     </div>
                     <div className="form-block-3 w-form">
                         <form id="email-form-2" name="email-form-2" data-name="Email Form 2" className="form-3">

@@ -1,4 +1,4 @@
-/*---------css de Alonso---------*/
+
 
 
 .linkdestaca {
@@ -38,6 +38,7 @@
 
 .div-block-63{
   padding-left: 30px;
+  padding-bottom: 30px;
 }
 
 .wrapperSocial {
@@ -640,7 +641,7 @@
   align-items: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: rgba(42, 43, 43, 0.53);
+  background-color: rgba(42, 43, 43, 0.65);
 }
 
 .text-block-3 {
