@@ -34,7 +34,7 @@ const messages = {
 const i18nProvider = polyglotI18nProvider(locale => messages['es']);
 
 const App = () =>
-    <Admin dataProvider={restClient} locale="es" i18nProvider={i18nProvider}>
+    <Admin dataProvider={restClient} authProvider={authProvider} locale="es" i18nProvider={i18nProvider}>
         <Resource name="propiedades" list={PropiedadList} create={PropiedadCreate} edit={PropiedadEdit}/>
         <Resource name="contactos" list={ContactoList} create={ContactoCreate} edit={ContactoEdit}/>
     </Admin>

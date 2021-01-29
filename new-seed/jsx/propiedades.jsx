@@ -28,7 +28,7 @@ export const Propiedad = ({ info, parecida }) => {
 
   return (
     <Link href={`/propiedades/${direccion}-${info.id}`} key={info.id}>
-      <div className="div-block-66" style={{cursor:"pointer", title:"Ver propiedad"}}>   {/*........................tarjeta propiedad */}
+      {/*<div className="div-block-66" style={{cursor:"pointer", title:"Ver propiedad"}}>   {/*........................tarjeta propiedad 
         <a className="linkdestaca w-inline-block">
           <div className="divdestaca"><img src={info.fotoPortada} alt="" className="imgdestaca" /></div>
           <div className="div-block-27">
@@ -64,7 +64,25 @@ export const Propiedad = ({ info, parecida }) => {
 
 
 
-      </div>
+      </div>*/}
+
+
+      
+        <div className="fichapropiedad">
+        <img src={info.fotoPortada} alt="" />
+          <div className="infoficha">
+            <div className="div-block-12">
+              <div className="text-block-3">{info.direccion} {info.ciudad}</div>
+              <a href="#" className="button-5 w-button">Ver</a>
+            </div>
+          </div>
+        </div>
+        
+      
+
+
+
+
     </Link>
   )
 }
@@ -144,17 +162,18 @@ const Propiedades = (props) => {
             <Buscador buscarPropiedades={buscarPropiedades} key={keyBuscador} reset={() => setKeyBuscador(keyBuscador + 1)}/> 
 
             <div className="wrapperdestacados">
+              <div className="fotos">
+                {
+                  propiedades.map(propiedad => (
+                    
+                    <Propiedad info={propiedad} />
 
-              {
-                propiedades.map(propiedad => (
+        
+                  )
+                  )
 
-                  <Propiedad info={propiedad} />
-
-      
-                )
-                )
-
-              }
+                }
+              </div>  
             </div>
              
               { !propiedades.length ?

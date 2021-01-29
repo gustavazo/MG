@@ -121,7 +121,7 @@ export const ContactoList = (props) => {
 export const ContactoCreate = (props) => {
     return (
         <Create {...props} title="Crear Contacto" >
-            <SimpleForm>
+            <SimpleForm variant="standard">
                 
                 <TextInput source="nombre" label="Código"/>
                 <TextInput source="mail" label="Mail" />

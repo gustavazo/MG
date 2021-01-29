@@ -30,79 +30,7 @@ import MetaTags from 'react-meta-tags';
 
 
 //-----------------------------------------------------
-/*export const Propiedad = ({ info }) => {
 
-  const aptaCredito = info.aptaCredito ? "Apta crédito" : "";
-  const estadoOperacion = 
-    info.reservada 
-    ? "Reservada" 
-    : info.alquilada 
-    ? "Alquilada" 
-    : info.vendida 
-    ? "Vendida" 
-    : "";
-
-  
-
-  return (
-    <Link href={`/propiedades/${info.id}`} key={info.id}>
-      <div className="div-block-66" >
-        <a
-          href="propiedad.html"
-          aria-current="page"
-          className="linkdestaca w-inline-block w--current"
-        >
-          <div className="divdestaca">
-            <img
-              src={info.fotoPortada}
-              srcSet="images/FRENTE-B-ALTA-p-500.jpeg 500w, images/FRENTE-B-ALTA-p-800.jpeg 800w, images/FRENTE-B-ALTA-p-1080.jpeg 1080w, images/FRENTE-B-ALTA-p-1600.jpeg 1600w, images/FRENTE-B-ALTA-p-2000.jpeg 2000w, images/FRENTE-B-ALTA.jpg 2338w"
-              sizes="(max-width: 767px) 94vw, (max-width: 991px) 56vw, (max-width: 8992px) 26vw, 2338px"
-              alt
-              className="imgdestaca"
-            />
-          </div>
-          <div className="div-block-27">
-            <h3 className="heading-7">venta casa rosario</h3>
-            <div className="text-block-8">Elorza 456</div>
-            <div className="div-block-37">
-              <div className="diviconos">
-                <img src="images/m2.png" alt className="iconocasa" />
-                <div className="text-block-11">200</div>
-              </div>
-              <div className="diviconos">
-                <img src="images/dorm.png" alt className="iconocasa" />
-                <div className="text-block-11">3</div>
-              </div>
-              <div className="diviconos">
-                <img src="images/baños.png" alt className="iconocasa" />
-                <div className="text-block-11">2</div>
-              </div>
-              <div className="diviconos">
-                <img src="images/cochera.png" alt className="iconocasa" />
-                <div className="text-block-11">2</div>
-              </div>
-              <div className="diviconos">
-                <img src="images/aptaCredito.png" alt className="iconocasa" />
-              </div>
-            </div>
-          </div>
-        </a>;
-        
-        {info.aptaCredito || info.estadoOperacion ?
-          <div className="opcionesventa">
-            <div className="text-block-21">
-              {aptaCredito}
-            </div>
-            <div className="text-block-21 negrita">{info.estadoOperacion}</div>
-          </div> : null
-        }
-
-
-
-      </div>
-    </Link>
-  )
-}*/
 
 
 const PropiedadDetalle = ({ info, parecidas }) => {
@@ -111,7 +39,7 @@ const PropiedadDetalle = ({ info, parecidas }) => {
 
   const router = useRouter();
 
-  const rutaCompartir = `http://alonso-inmobiliaria.com${router.asPath}`;
+  const rutaCompartir = `http://alonso-inmobiliaria.com${router.asPath}`;     /*----------------------------------- cambiaaaaar */
 
   const aptaCredito = info.aptaCredito ? "Apta crédito" : "";
 
@@ -132,9 +60,9 @@ const PropiedadDetalle = ({ info, parecidas }) => {
 
   const parecidasNew = parecidas.filter(parecida => info.id !== parecida.id).splice(0, 2);
 
-  const mail = `"https://formspree.io/${info.contacto.mail}`;
+  const mail = `"https://formspree.io/"`;
 
-  //console.log(mail);
+  console.log(info.contacto);
 
   const fotoContacto = `${info.contacto.foto}`;
 
@@ -142,7 +70,7 @@ const PropiedadDetalle = ({ info, parecidas }) => {
 
   const title = `${info.tipoOperacion} ${info.tipoPropiedad} ${info.dormitorios} dormitorios ${info.direccion} ${info.ciudad}`;
 
-  const tele = info.contacto.telefono.replace(/\s+/g, '');
+  const tele =  "";
   const what = `https://wa.me/549${tele}?text=${referencia}`
 
   return (
@@ -316,13 +244,13 @@ const PropiedadDetalle = ({ info, parecidas }) => {
                 <div className="txtctacto">Contacto</div>
                 <img src={fotoContacto} />
                 <div className="txtctacto">{info.contacto.nombre}</div>
-                <div className="linkctacto"><img src="images/mobileIcon.png" loading="lazy" alt="Icono móvil" className="image-8" />
+                <div className="linkctacto"><img src="/images/mobileIcon.png" loading="lazy" alt="Icono móvil" className="image-8" />
                   <a href="#" className="txtctacto">{info.contacto.telefono}</a>
                 </div>
-                <div className="linkctacto"><img src="images/whatsIcon.png" loading="lazy" alt="Icono Whatsapp" className="image-8" />
+                <div className="linkctacto"><img src="/images/whatsIcon.png" loading="lazy" alt="Icono Whatsapp" className="image-8" />
                   <a href="#" className="txtctacto">{info.contacto.telefono}</a>
                 </div>
-                <div className="linkctacto"><img src="images/mailIcon.png" loading="lazy" alt="Icono mail" className="image-8" />
+                <div className="linkctacto"><img src="/images/mailIcon.png" loading="lazy" alt="Icono mail" className="image-8" />
                   <a href="#" className="txtctacto">{info.contacto.mail}</a>
                 </div>
               </div>

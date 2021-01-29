@@ -174,9 +174,7 @@ export const PropiedadCreate = (props) => {
                 <TextInput source="acceso" label="Acceso" />
                 <TextInput source="piso" label="Piso" />
                 <TextInput source="servicios" label="Servicios" />
-                
-                <TextInput source="descripcion" multiline label="Descripción" />
-                
+                <TextInput source="descripcion" label="Descripción" />
                 <TextInput source="video" label="Video" />
                 <TextInput source="fotoPortada" label="Foto portada" />
 
@@ -258,8 +256,8 @@ export const PropiedadEdit = (props) => {
                 <TextInput source="acceso" label="Acceso" />
                 <TextInput source="piso" label="Piso" />
                 <TextInput source="servicios" label="Servicios" />
-                
-v                <TextInput source="video" label="Video" />
+                <TextInput source="descripcion" label="Descripción" />
+                <TextInput source="video" label="Video" />
 
                 <TextInput source="fotos" label="Fotos" />
                 <SelectInput source="estadoOperacion" choices={[

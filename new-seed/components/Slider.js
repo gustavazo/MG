@@ -48,6 +48,9 @@ const Slider = (props) => {
                                     <h2 className="heading-3">{propiedad.tipoOperacion}</h2>
                                     <div className="div-block-4">
                                         <h3 className="heading-4">{propiedad.tipoPropiedad}</h3>
+                                        <h3 className="heading-4">{propiedad.dormitorios} dorm</h3>
+                                        <h3 className="heading-4">{propiedad.direccion}</h3>
+                                        <h3 className="heading-4">{propiedad.ciudad}</h3>
                                     </div>
                                 </div>
                                 <div>
