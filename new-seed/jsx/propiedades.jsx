@@ -28,61 +28,16 @@ export const Propiedad = ({ info, parecida }) => {
 
   return (
     <Link href={`/propiedades/${direccion}-${info.id}`} key={info.id}>
-      {/*<div className="div-block-66" style={{cursor:"pointer", title:"Ver propiedad"}}>   {/*........................tarjeta propiedad 
-        <a className="linkdestaca w-inline-block">
-          <div className="divdestaca"><img src={info.fotoPortada} alt="" className="imgdestaca" /></div>
-          <div className="div-block-27">
-            <h3 className="heading-7">{info.tipoOperacion}</h3>
-            <h3 className="heading-7">{info.tipoPropiedad}</h3>
-            <h3 className="heading-7">{info.ciudad}</h3>
-            <div className="text-block-8">{info.direccion}</div>
-            <div className="div-block-37">
-              <div className="diviconos"><img src="/images/m2.png" alt="" className="iconocasa" />
-                <div className="text-block-11">{info.supCubierta}</div>
-              </div>
-              <div className="diviconos"><img src="/images/dorm.png" alt="" className="iconocasa" />
-                <div className="text-block-11">{info.dormitorios}</div>
-              </div>
-              <div className="diviconos"><img src="/images/baños.png" alt="" className="iconocasa" />
-                <div className="text-block-11">{info.banos}</div>
-              </div>
-              <div className="diviconos"><img src="/images/cochera.png" alt="" className="iconocasa" />
-                <div className="text-block-11">{info.cocheras}</div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        {info.aptaCredito || info.estadoOperacion  ?
-          <div className="opcionesventa">
-            <div className="text-block-21">
-              {aptaCredito}
-            </div>
-            <div className="text-block-21 negrita">{info.estadoOperacion}</div>
-          </div> : null
-        }
-
-
-
-      </div>*/}
-
-
-      
         <div className="fichapropiedad">
         <img src={info.fotoPortada} alt="" />
           <div className="infoficha">
             <div className="div-block-12">
               <div className="text-block-3">{info.direccion} {info.ciudad}</div>
               <a href="#" className="button-5 w-button">Ver</a>
+
             </div>
           </div>
         </div>
-        
-      
-
-
-
-
     </Link>
   )
 }

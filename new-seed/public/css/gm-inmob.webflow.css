@@ -1,4 +1,7 @@
-
+.wrapperMap {
+  
+  margin-top: 30px;
+}
 
 
 .linkdestaca {
@@ -80,6 +83,7 @@
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .section {

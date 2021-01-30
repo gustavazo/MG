@@ -17,6 +17,25 @@ const Home = (props) => {
   const [propiedades, setPropiedades] = React.useState(props.propiedades);
   const [key, setKey] = React.useState(1);
   const [keyBuscador, setKeyBuscador] = React.useState(0);
+  const [tabActual, setTabActual] = React.useState("mapa");
+
+  function urlCreate(propiedad) {
+    const direccion = '/propiedades/' + (propiedad.tipoOperacion + "-" + propiedad.tipoPropiedad + propiedad.dormitorios + " dorm-" + (propiedad.direccion + " " +propiedad.ciudad).toLowerCase()).replace(/ /g, "-") + '-' + propiedad.id;
+    return direccion;
+  }
+
+  const handlerClickToPropiedad = (propiedad) => () => {
+    
+    window.location.href = urlCreate(propiedad)
+  }
+
+  const cambiaTab = (evt) => {
+    if (evt.target.getAttribute("id") == "fichaId")  {
+      setTabActual("ficha");
+    } else  {
+      setTabActual("mapa");
+    }
+  }
 
   const buscarPropiedades = (filtro) => (evento) => {
     console.log('Por buscar con filtro: ', filtro, evento);
@@ -87,50 +106,53 @@ const Home = (props) => {
 
             <div data-duration-in={300} data-duration-out={100} className="tabs w-tabs">
               <div className="tabs-menu w-tab-menu">
-                <a data-w-tab="Tab 1" className="tablink w-inline-block w-tab-link w--current">
+                <a data-w-tab="Tab 1" id="fichaId" onClick={cambiaTab} className={`tablink w-inline-block w-tab-link ${tabActual === "ficha" ? "w--current" : ""}`}>
                   <div>Lista</div>
                 </a>
-                <a data-w-tab="Tab 2" className="tablink w-inline-block w-tab-link">
+                <a data-w-tab="Tab 2" id="mapaId" onClick={cambiaTab} className={`tablink w-inline-block w-tab-link ${tabActual === "mapa" ? "w--current" : ""}`}>
                   <div>Mapa</div>
                 </a>
               </div>
               <div className="w-tab-content">
-                <div data-w-tab="Tab 1" className="w-tab-pane w--tab-active">
-                  <div className="fotos">
-                  {
-                    propiedades.map(p => (
-                      <div className="fichapropiedad" style={{backgroundImage: `url("${p.fotoPortada}")`}}>
-                        <div className="infoficha">
-                          <div className="div-block-12">
-                            <div className="text-block-3">{p.direccion}</div>
-                            <a href="#" className="button-5 w-button">Ver</a>
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  }
-                  </div>
-                </div>
-                <div data-w-tab="Tab 2" className="w-tab-pane">
-                  {/*<MapContainer propiedades={propiedades} key={key}/>*/}
-                  {/*<img src="images/Sin-título.png" loading="lazy" sizes="(max-width: 479px) 97vw, (max-width: 991px) 96vw, (max-width: 2204px) 86vw, 1896px" srcSet="images/Sin-título-p-500.png 500w, images/Sin-título-p-800.png 800w, images/Sin-título-p-1080.png 1080w, images/Sin-título-p-1600.png 1600w, images/Sin-título.png 1896w" alt="" className="image-3" />*/}
-                </div>
+                {tabActual === "ficha" ?
+                      <div className="fotos">
+                        {
+                          propiedades.map(p => (
+                            <div className="fichapropiedad" style={{ backgroundImage: `url("${p.fotoPortada}")` }}>
+                              <div className="infoficha">
+                                <div className="div-block-12">
+                                  <div className="text-block-3">{p.direccion}</div>
+
+                                  <a className="button-5 w-button" style={{cursor:'pointer'}} title="Click para ver toda la info" onClick={handlerClickToPropiedad(p)}>Ver más</a>
+
+                                </div>
+                              </div>
+                            </div>
+                          ))
+                        }
+                        {!propiedades.length ?
+                          <div className="divnotfound">
+                            <div>No se encontraron resultados para la búsqueda.</div>
+                          </div> : null
+                        }
+                      
+                    </div> 
+                  :
+                    <div className="wrapperMap">    
+                      <MapContainer propiedades={propiedades} key={key}/>
+                    </div>  
+                }
+                                  
+                    
               </div>
             </div>
-
-
-
-            <MapContainer propiedades={propiedades} key={key} />
+        
 
 
             
           </div>
 
-          {!propiedades.length ?
-            <div className="divnotfound">
-              <div>No se encontraron resultados para la búsqueda.</div>
-            </div> : null
-          }
+          
         </div>
 
 
