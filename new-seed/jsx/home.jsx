@@ -56,7 +56,7 @@ const Home = (props) => {
       }
     }
 
-    console.log('filtro', filtro);
+    console.log('filtro puto', filtro);
 
     axios.get(`${config.apiUrl}/propiedades`, {
       params: {
@@ -121,7 +121,8 @@ const Home = (props) => {
                             <div className="fichapropiedad" style={{ backgroundImage: `url("${p.fotoPortada}")` }}>
                               <div className="infoficha">
                                 <div className="div-block-12">
-                                  <div className="text-block-3">{p.direccion}</div>
+                                  <div className="text-block-3">{p.tipoOperacion.toUpperCase()} {p.tipoPropiedad}</div>
+                                  <div className="text-block-3">{p.direccion} {p.ciudad}</div>
 
                                   <a className="button-5 w-button" style={{cursor:'pointer'}} title="Click para ver toda la info" onClick={handlerClickToPropiedad(p)}>Ver más</a>
 

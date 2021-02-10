@@ -22,7 +22,7 @@ export default props => (
             <a href="#" className="brand-2 w-nav-brand"><img src="/images/logo.png" loading="lazy" sizes="(max-width: 479px) 84vw, 103px" srcSet="/images/logo-p-500.png 500w, images/logo.png 705w" alt="Logo" className="image" /></a>
             <nav role="navigation" className="nav-menu-2 w-nav-menu">
                 <Link href="/">
-                    <div  className="nav-link w-nav-link">Home</div>
+                    <div className="nav-link w-nav-link">Home</div>
                 </Link> 
                 <Link href="">    
                     <div className="nav-link w-nav-link">emprendimientos</div>
@@ -34,7 +34,7 @@ export default props => (
                     <div className="nav-link w-nav-link">contacto</div>
                 </Link>   
                 <div className="div-block-18">
-                    <a href="#" className="link-block w-inline-block"><img src="/images/instaIcon.png" loading="lazy" alt="Icono Instagram" className="imgsocial" /></a>
+                    <a href="#" className="link-block w-inline-block"><img src="/images/faceIcon.png" loading="lazy" alt="Icono Instagram" className="imgsocial" /></a>
                     <a href="#" className="w-inline-block"><img src="/images/instaIcon.png" loading="lazy" alt="Icono Instagram" className="imgsocial" /></a>
                 </div>
             </nav>

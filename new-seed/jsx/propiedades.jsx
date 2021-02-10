@@ -32,6 +32,7 @@ export const Propiedad = ({ info, parecida }) => {
         <img src={info.fotoPortada} alt="" />
           <div className="infoficha">
             <div className="div-block-12">
+              <div className="text-block-3">{info.tipoOperacion} {info.tipoPropiedad}</div>
               <div className="text-block-3">{info.direccion} {info.ciudad}</div>
               <a href="#" className="button-5 w-button">Ver</a>
 
@@ -133,7 +134,7 @@ const Propiedades = (props) => {
              
               { !propiedades.length ?
                 <div className="divnotfound">
-                  <div>No se encontraron resultados para la búsqueda.</div>
+                  <div>No se encontraron resultados para la búsqueda xxx.</div>
                 </div> : null
               }   
             
