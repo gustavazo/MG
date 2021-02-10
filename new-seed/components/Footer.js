@@ -98,7 +98,7 @@ export default props => (
                             <div className="txtfooter">341 896547</div>
                         </div>
                         <div className="div-block-16"><img src="/images/mailIcon.png" loading="lazy" alt="Icono mail" className="iconfooter" />
-                            <div className="txtfooter">info@gmbienesraices.com</div>
+                            <div className="txtfooter">gm.bienesraices20@hotmail.com</div>
                         </div>
                         <div className="div-block-16"><img src="/images/faceIcon.png" loading="lazy" alt="Icono facebook
 " className="iconsocfooter" /><img src="/images/instaIcon.png" loading="lazy" alt="Icono Instagram" className="iconsocfooter" /></div>
@@ -108,13 +108,19 @@ export default props => (
                 <div className="w-col w-col-7">
                     <div className="text-block-5">Envíenos su consulta y a la brevedad le responderemos.</div>
                     <div className="form-block w-form">
-                        <form id="email-form" name="email-form" data-name="Email Form" className="form-2">
-                            <div className="w-row">
-                                <div className="w-col w-col-4"><input type="text" className="txtfield w-input" maxLength={256} name="Nombre" data-name="Name 2" placeholder="Nombre" id="name-2" /></div>
-                                <div className="w-col w-col-4"><input type="email" className="txtfield w-input" maxLength={256} name="Email" data-name="Email 3" placeholder="Email" id="email-3" required /></div>
-                                <div className="w-col w-col-4"><input type="phone" className="txtfield w-input" maxLength={256} name="Teléfono" data-name="Email 2" placeholder="Teléfono" id="email-2" required /></div>
-                            </div><textarea placeholder="Mensaje" maxLength={5000} id="field-2" name="Mensaje" data-name="Field 2" className="txtfield msje w-input" defaultValue={""} />
-                            <div className="div-block-17"><input type="submit" defaultValue="Enviar" data-wait="Please wait..." className="submitbutton w-button" /></div>
+                        <form
+                            action="https://formsubmit.co/gm.bienesraices20@hotmail.com"
+                            method="POST" 
+                            id="email-form" 
+                            name="email-form" 
+                            data-name="Email Form" 
+                            className="form-2">
+                                    <div className="w-row">
+                                        <div className="w-col w-col-4"><input type="text" className="txtfield w-input" maxLength={256} name="Nombre" data-name="Name 2" placeholder="Nombre" id="name-2" /></div>
+                                        <div className="w-col w-col-4"><input type="email" className="txtfield w-input" maxLength={256} name="Email" data-name="Email 3" placeholder="Email" id="email-3" required /></div>
+                                        <div className="w-col w-col-4"><input type="phone" className="txtfield w-input" maxLength={256} name="Teléfono" data-name="Email 2" placeholder="Teléfono" id="email-2" required /></div>
+                                    </div><textarea placeholder="Mensaje" maxLength={5000} id="field-2" name="Mensaje" data-name="Field 2" className="txtfield msje w-input" defaultValue={""} />
+                                    <div className="div-block-17"><input type="submit" defaultValue="Enviar" data-wait="Please wait..." className="submitbutton w-button" /></div>
                         </form>
                         <div className="w-form-done">
                             <div>Gracias! Su envío ha sido recibido!</div>

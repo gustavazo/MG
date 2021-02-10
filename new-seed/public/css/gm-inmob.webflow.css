@@ -522,6 +522,11 @@
 }
 
 .text-block-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
   position: relative;
   top: auto;
   bottom: auto;
@@ -1098,7 +1103,7 @@
 
 .section-4 {
   height: auto;
-  margin-top: 83px;
+  margin-top: 0px;
   padding-bottom: 100px;
 }
 

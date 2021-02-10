@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 
 const Slider = (props) => {
+
+    function urlCreate(propiedad) {
+        const direccion = '/propiedades/' + (propiedad.tipoOperacion + "-" + propiedad.tipoPropiedad + propiedad.dormitorios + " dorm-" + (propiedad.direccion + " " +propiedad.ciudad).toLowerCase()).replace(/ /g, "-") + '-' + propiedad.id;
+        return direccion;
+    }
     
     
     const handlerClickToPropiedad = (propiedad) => () => {
@@ -54,7 +59,7 @@ const Slider = (props) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#" className="button-2 w-button">Ver propiedad</a>
+                                    <a className="button-2 w-button" onClick={handlerClickToPropiedad(propiedad)}>Ver propiedad</a>
                                 </div>
                             </div>
                         </div>

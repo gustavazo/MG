@@ -43,7 +43,33 @@ const Buscador = (props) => {
                 <div className="div-block-9">
                     <div className="destacado" />
                     <div className="selectfilter">
-                        <div className="text-block-2">Búsqueda:  {filtro.tipoOperacion} / {filtro.ciudad} / {filtro.tipoPropiedad} / {filtro.dormitorios}</div>
+                        <div className="text-block-2">Búsqueda:
+
+                            {filtro.tipoOperacion === '' ?
+                                <div>
+                                    Todos 
+                                </div> : <div>{filtro.tipoOperacion} </div>
+                            }
+
+                            {filtro.ciudad === '' ?
+                                <div>
+                                    / Todos 
+                                </div> : <div>/ {filtro.ciudad} </div>
+                            }
+                            
+                            {filtro.tipoPropiedad === '' ?
+                                <div>
+                                    / Todos 
+                                </div> : <div>/ {filtro.tipoPropiedad} </div>
+                            } 
+
+                            {filtro.dormitorios === '' ?
+                                <div>
+                                    / Todos 
+                                </div> : <div>/ {filtro.dormitorios} </div>
+                            }  
+                                
+                        </div>
                     </div>
                     <div className="form-block-3 w-form">
                         <form id="email-form-2" name="email-form-2" data-name="Email Form 2" className="form-3">

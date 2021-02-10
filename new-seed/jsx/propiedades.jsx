@@ -134,7 +134,7 @@ const Propiedades = (props) => {
              
               { !propiedades.length ?
                 <div className="divnotfound">
-                  <div>No se encontraron resultados para la búsqueda xxx.</div>
+                  <div>No se encontraron resultados para la búsqueda.</div>
                 </div> : null
               }   
             
