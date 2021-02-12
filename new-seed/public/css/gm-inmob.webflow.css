@@ -110,7 +110,7 @@
 }
 
 .slide {
-  background-image: url('../images/terrazasgreen130215.jpg');
+  background-image: url('../images/rosarioAzul.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -824,6 +824,7 @@
   font-family: 'Open Sans', sans-serif;
   color: #c1bfbf;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .txtfield {

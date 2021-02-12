@@ -122,12 +122,12 @@ export const PropiedadCreate = (props) => {
     return (
         <Create {...props} title="Crear Propiedad" >
             <SimpleForm variant="standard">
-                <TextInput source="codigo" label="Codigo" />
+                <TextInput source="codigo" label="Codigo" validate={required()}/>
 
                 <SelectInput source="tipoOperacion" choices={[
                      { id: 'venta', name: 'Venta' },
                      { id: 'alquiler', name: 'Alquiler' },
-                ]} />
+                ]} validate={required()}/>
                 <SelectInput source="tipoPropiedad" choices={[
                      { id: 'casa', name: 'Casa' },
                      { id: 'departamento', name: 'Departamento' },
@@ -137,17 +137,17 @@ export const PropiedadCreate = (props) => {
                      { id: 'oficina', name: 'Oficina' },
                      { id: 'localComercial', name: 'Local comercial' },
                      { id: 'cochera', name: 'Cochera' },
-                ]} />
+                ]} validate={required()}/>
                 <SelectInput source="dormitorios" choices={[
                      { id: 'monoambiente', name: 'Monoambiente' },
                      { id: '1', name: '1' },
                      { id: '2', name: '2' },
                      { id: '3', name: '3' },
                      { id: '4', name: '4 o más' },
-                ]} />
+                ]} validate={required()}/>
 
-                <TextInput source="direccion" label="Dirección" />
-                <TextInput source="direccionMap" label="Dirección mapa" />
+                <TextInput validate={required()} source="direccion" label="Dirección" />
+                <TextInput validate={required()} source="direccionMap" label="Dirección mapa" />
                 <TextInput source="barrio" label="Barrio" />
 
                 <SelectInput source="ciudad" choices={[
@@ -161,7 +161,7 @@ export const PropiedadCreate = (props) => {
                      { id: 'andino', name: 'Andino' },
                      { id: 'roldan', name: 'Roldán' },
                      { id: 'pueblo esther', name: 'Pueblo Esther' },
-                ]} />
+                ]} validate={required()}/>
 
                 <TextInput source="precio" label="Precio" />
                 <TextInput source="formaPago" label="Forma de pago" />
@@ -196,7 +196,7 @@ export const PropiedadCreate = (props) => {
                 <BooleanInput source="destacada" label="Destacada" />
                 <BooleanInput source="slider" label="Destacada en slider" />
 
-                <ReferenceInput label="Contacto" source="contactoId" reference="contactos">
+                <ReferenceInput label="Contacto" source="contactoId" reference="contactos" validate={required()}>
                     <SelectInput optionText="nombre" />
                 </ReferenceInput>
             </SimpleForm>

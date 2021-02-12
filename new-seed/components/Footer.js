@@ -89,19 +89,34 @@ export default props => (
                 <div className="column-4 w-col w-col-3">
                     <div>
                         <div className="div-block-16"><img src="/images/localIcon.png" loading="lazy" alt="Icono localización" className="iconfooter" />
-                            <div className="txtfooter">Dirección</div>
+                            <div className="txtfooter"></div>
                         </div>
                         <div className="div-block-16"><img src="/images/mobileIcon.png" loading="lazy" alt="Icono móvil" className="iconfooter" />
-                            <div className="txtfooter">341 896547</div>
+                            <div className="txtfooter">
+                                <a className="txtfooter" href="tel:+5493416203679">
+                                    +54 9 3416 20-3679
+                                </a>
+                                
+                            </div>
                         </div>
                         <div className="div-block-16"><img src="/images/whatsIcon.png" loading="lazy" alt="Icono Whatsapp" className="iconfooter" />
-                            <div className="txtfooter">341 896547</div>
+                            <div className="txtfooter">
+                                <a className="txtfooter" href="https://wa.me/+5493416203679?text=mensaje">
+                                    +54 9 3416 20-3679
+                                </a>   
+                            </div>
                         </div>
                         <div className="div-block-16"><img src="/images/mailIcon.png" loading="lazy" alt="Icono mail" className="iconfooter" />
                             <div className="txtfooter">gm.bienesraices20@hotmail.com</div>
                         </div>
-                        <div className="div-block-16"><img src="/images/faceIcon.png" loading="lazy" alt="Icono facebook
-" className="iconsocfooter" /><img src="/images/instaIcon.png" loading="lazy" alt="Icono Instagram" className="iconsocfooter" /></div>
+                        <div className="div-block-16">
+                            <a href="https://www.facebook.com/GM-Bienes-Ra%C3%ADces-113127583702411">
+                                <img src="/images/faceIcon.png" loading="lazy" alt="Icono facebook" className="iconsocfooter" />
+                            </a> 
+                            <a href="https://instagram.com/gm_propiedades20?igshid=8lbesknih5rj">   
+                                <img src="/images/instaIcon.png" loading="lazy" alt="Icono Instagram" className="iconsocfooter" />
+                            </a>    
+                        </div>
                     </div>
                 </div>
                 <div className="w-col w-col-2" />

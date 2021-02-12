@@ -34,8 +34,8 @@ export default props => (
                     <div className="nav-link w-nav-link">contacto</div>
                 </Link>   
                 <div className="div-block-18">
-                    <a href="#" className="link-block w-inline-block"><img src="/images/faceIcon.png" loading="lazy" alt="Icono Instagram" className="imgsocial" /></a>
-                    <a href="#" className="w-inline-block"><img src="/images/instaIcon.png" loading="lazy" alt="Icono Instagram" className="imgsocial" /></a>
+                    <a href="https://www.facebook.com/GM-Bienes-Ra%C3%ADces-113127583702411" className="link-block w-inline-block"><img src="/images/faceIcon.png" loading="lazy" alt="Icono Facebook" className="imgsocial" /></a>
+                    <a href="https://instagram.com/gm_propiedades20?igshid=8lbesknih5rj" className="w-inline-block"><img src="/images/instaIcon.png" loading="lazy" alt="Icono Instagram" className="imgsocial" /></a>
                 </div>
             </nav>
             <div className="menu-button w-nav-button">

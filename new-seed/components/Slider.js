@@ -33,10 +33,10 @@ const Slider = (props) => {
                         </div>
                         <div className="div-block-23">
                             <div className="div-block-24"><img src="images/mobileIcon.png" loading="lazy" alt="Icono móvil" className="image-5" />
-                                <a href="#" className="link">0341 6556677</a>
+                                <a href="#" className="link">+54 9 3416 20-3679</a>
                             </div>
                             <div><img src="images/whatsIcon.png" loading="lazy" alt="Icono Whatsapp" className="image-5" />
-                                <a href="#" className="link">0341 6556677</a>
+                                <a href="#" className="link">+54 9 3416 20-3679</a>
                             </div>
                         </div>
                     </div>
