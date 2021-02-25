@@ -68,10 +68,14 @@ const PropiedadDetalle = ({ info, parecidas }) => {
 
   const shareUrl = rutaCompartir;
 
-  const title = `${info.tipoOperacion} ${info.tipoPropiedad} ${info.dormitorios} dormitorios ${info.direccion} ${info.ciudad}`;
+  const title = `${info.tipoOperacion} ${info.tipoPropiedad} ${info.dormitorios} dormitorio/s ${info.direccion} ${info.ciudad}`;
 
   const tele =  "";
   const what = `https://wa.me/549${tele}?text=${referencia}`
+
+  function Capitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
   return (
     <>
@@ -89,18 +93,18 @@ const PropiedadDetalle = ({ info, parecidas }) => {
         <div className="columns-2 w-row">
           <div className="column-6 w-col w-col-5 w-col-small-small-stack">
             <div className="div-block-20">
-              <h1 className="heading-6">{info.tipoOperacion}</h1>
+              <h1 className="heading-6">{Capitalize(info.tipoOperacion)}</h1>
             </div>
             <div className="wrapperdatos">
               <div className="div-block-25">
-                <h2 className="heading-7">{info.tipoPropiedad}</h2>
-                <h2 className="heading-7">{info.dormitorios} dormitorios</h2>
-                <h2 className="heading-7">{info.direccion}</h2>
+                <h2 className="heading-7">{Capitalize(info.tipoPropiedad)}</h2>
+                <h2 className="heading-7">{info.dormitorios} dormitorio/s</h2>
+                <h2 className="heading-7">{Capitalize(info.direccion)}</h2>
                 {info.barrio ?
-                   <h2 className="heading-7">{info.barrio}</h2>
+                   <h2 className="heading-7">{Capitalize(info.barrio)}</h2>
                    : null
                 }
-                <h2 className="heading-7">{info.ciudad}</h2>
+                <h2 className="heading-7">{Capitalize(info.ciudad)}</h2>
                 <h2 className="precio">{info.precio}</h2>
               </div>
               <div className="div-block-26">
@@ -258,7 +262,35 @@ const PropiedadDetalle = ({ info, parecidas }) => {
                 <div className="div-block-33">
                   <div className="txtctacto">Consulte vía mail con el contacto</div>
                   <div className="form-block-2 w-form">
-                    <form id="email-form-2" name="email-form-2" data-name="Email Form 2" className="w-clearfix"><input type="text" className="txtfieldprop w-input" maxLength={256} name="name-3" data-name="Name 3" placeholder="Nombre" id="name-3" /><input type="email" className="txtfieldprop w-input" maxLength={256} name="email-4" data-name="Email 4" placeholder="Email" id="email-4" required /><input type="tel" className="txtfieldprop w-input" maxLength={256} name="email-4" data-name="Email 4" placeholder="Teléfono" id="email-4" required /><textarea placeholder="Mensaje" maxLength={5000} id="field-3" name="field-3" required className="txtfieldprop msje w-input" defaultValue={` Referencia: ${info.tipoOperacion} ${info.tipoPropiedad} ${info.direccion} ${info.ciudad}`} /><input type="submit" defaultValue="Enviar" data-wait="Please wait..." className="submit-button w-button" /></form>  
+
+
+                    <form
+                      action="https://formsubmit.co/gm.bienesraices20@hotmail.com"
+                      method="POST"
+                      id="email-form-2"
+                      name="email-form-2"
+                      data-name="Email Form 2"
+                      className="w-clearfix">
+                      
+                        <input type="text" className="txtfieldprop w-input" maxLength={256} name="Nombre" data-name="Name 3" placeholder="Nombre" id="name-3" />
+                        <input type="email" className="txtfieldprop w-input" maxLength={256} name="email-4" data-name="Email 4" placeholder="Email" id="email-4" required />
+                        <input type="tel" className="txtfieldprop w-input" maxLength={256} name="Teléfono" data-name="Email 2" placeholder="Teléfono" id="email-4" required />
+                        <textarea placeholder="Mensaje" maxLength={5000} id="field-3" name="Mensaje" required  className="txtfieldprop msje w-input" defaultValue={` Referencia: ${info.tipoOperacion} ${info.tipoPropiedad} ${info.direccion} ${info.ciudad}`} />
+                        <input type="submit" defaultValue="Enviar" data-wait="Please wait..." className="submitbutton w-button" />
+                    </form>
+
+
+
+                    {/*<form id="email-form-2" name="email-form-2" data-name="Email Form 2" className="w-clearfix">
+                      <input type="text" className="txtfieldprop w-input" maxLength={256} name="name-3" data-name="Name 3" placeholder="Nombre" id="name-3" />
+                      <input type="email" className="txtfieldprop w-input" maxLength={256} name="email-4" data-name="Email 4" placeholder="Email" id="email-4" required />
+                      <input type="tel" className="txtfieldprop w-input" maxLength={256} name="email-4" data-name="Email 4" placeholder="Teléfono" id="email-4" required />
+                      <textarea placeholder="Mensaje" maxLength={5000} id="field-3" name="field-3" required className="txtfieldprop msje w-input" defaultValue={` Referencia: ${info.tipoOperacion} ${info.tipoPropiedad} ${info.direccion} ${info.ciudad}`} />
+                      <input type="submit" defaultValue="Enviar" data-wait="Please wait..." className="submit-button w-button" />
+                      </form>*/ } 
+                    
+                    
+                    
                     <div className="w-form-done">
                       <div>Thank you! Your submission has been received!</div>
                     </div>
